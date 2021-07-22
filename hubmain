@@ -101,11 +101,6 @@ function XanaxUILib:CreateWindow(WindowText)
 	local TabTxt = Instance.new("TextLabel")
 	local TabNameStatus = Instance.new("TextLabel")
 
-	--trying to add something cool
-	local plricon = Instance.new("ImageLabel")
-    local plrname = Instance.new("TextLabel")
-    local plrvhid = Instance.new("TextLabel")
-
 
 	XanaxLib.Name = "XanaxLib"
 	XanaxLib.Parent = game:GetService("CoreGui")
