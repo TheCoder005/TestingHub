@@ -44,7 +44,7 @@ function XanaxUILib.functions:Drag(frame,hold)
     local dragging
     local dragInput
     local dragStart
-    local startPos 
+    local startPos
 
     local function update(input)
         local delta = input.Position - dragStart
@@ -115,13 +115,10 @@ function XanaxUILib:CreateWindow(WindowText)
 	
 	TabBtns.Name = "TabBtns"
 	TabBtns.Parent = Main
-	TabBtns.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TabBtns.BackgroundColor3 = Color3.new(1, 1, 1)
 	TabBtns.BackgroundTransparency = 1.000
-	TabBtns.Size = UDim2.new(0, 120, 0, 250)
-	TabBtns.Image = "rbxassetid://2790382281"
-	TabBtns.ImageColor3 = Color3.fromRGB(43, 43, 43)
-	TabBtns.ScaleType = Enum.ScaleType.Slice
-	TabBtns.SliceCenter = Rect.new(4, 4, 252, 252)
+    TabBtns.Position = UDim2.new(0.0805369094, 0, 0.155425221, 0)
+	TabBtns.Size = UDim2.new(0, 123, 0, 281)
 	
 	Line1.Name = "Line1"
 	Line1.Parent = TabBtns
