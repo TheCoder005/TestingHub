@@ -190,6 +190,39 @@ function XanaxUILib:CreateWindow(WindowText)
 	UiTitle.TextXAlignment = Enum.TextXAlignment.Left
 	UiTitle.Position = UDim2.new(0.13, 0, 0, 0)
 
+	--cool
+	plricon.Name = "plricon"
+    plricon.Parent = Side
+    plricon.BackgroundColor3 = Color3.new(0.192157, 0.2, 0.219608)
+    plricon.Position = UDim2.new(0.0804695264, 0, 0.0146627575, 0)
+    plricon.Size = UDim2.new(0, 37, 0, 37)
+
+    plrname.Name = "plrname"
+    plrname.Parent = Side
+    plrname.BackgroundColor3 = Color3.new(1, 1, 1)
+    plrname.BackgroundTransparency = 1
+    plrname.Position = UDim2.new(0.37552464, 0, 0.020527862, 0)
+    plrname.Size = UDim2.new(0, 79, 0, 16)
+    plrname.Font = Enum.Font.SourceSansSemibold
+    plrname.Text = "plrname"
+    plrname.TextColor3 = Color3.new(1, 1, 1)
+    plrname.TextSize = 18
+    plrname.TextXAlignment = Enum.TextXAlignment.Left
+
+    plrvhid.Name = "plrvhid"
+    plrvhid.Parent = Side
+    plrvhid.BackgroundColor3 = Color3.new(1, 1, 1)
+    plrvhid.BackgroundTransparency = 1
+    plrvhid.Position = UDim2.new(0.37552464, 0, 0.0703812391, 0)
+    plrvhid.Size = UDim2.new(0, 79, 0, 16)
+    plrvhid.Font = Enum.Font.SourceSansSemibold
+    plrvhid.Text = "uAFUO7pQ7xdQrmAA"
+    plrvhid.TextColor3 = Color3.new(0.65098, 0.65098, 0.65098)
+    plrvhid.TextSize = 10
+    plrvhid.TextXAlignment = Enum.TextXAlignment.Left
+	--end of cool
+
+
 	TabTxt.Name = "TabTxt"
 	TabTxt.Parent = Top
 	TabTxt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
