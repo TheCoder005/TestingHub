@@ -1,22 +1,3 @@
---[[
-EXAMPLE:
-local XanaxUILib = loadstring(game:HttpGet("https://pastebin.com/raw/XZz3Ytbu"))()
-local Ui = XanaxUILib:CreateWindow("Example UI")
-local Info = Ui:CreateSection("Info")
-local ExampleSection = Ui:CreateSection("Example")
-
-Info:CreateLabel("Made by yeetus#3635")
-Info:CreateLabel("This is a UI Library example")
-Info:CreateButton("Destroy UI", function() XanaxUILib.functions:DestroyGUI() end)
-
-ExampleSection:CreateLabel("This is label")
-ExampleSection:CreateButton("This is button", function() print("This is function") end)
-ExampleSection:CreateToggle("This is toggle", "This is flag", function(Toggled) print("This is optional argument", Toggled) end)
-ExampleSection:CreateSlider("This is walkspeed slider", "WalkSpeed", 16, 100, false, function(ws)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
-end)
-]]--
-
 local XanaxUILib = {}
 
 XanaxUILib.flags = {}
@@ -250,25 +231,25 @@ function XanaxUILib:CreateWindow(WindowText)
 	local imageLabel = game.CoreGui.XanaxLib.Main.Top.plricon
 	imageLabel.Image = content
 	imageLabel.Size = UDim2.new(0, 37,0, 37)
+	--open and close
+	local UserInputService = game:GetService("UserInputService")
+	local shiftKeyL = Enum.KeyCode.LeftShift
+	local shiftKeyR = Enum.KeyCode.RightShift
+	local function IsShiftKeyDown()
+		return UserInputService:IsKeyDown(shiftKeyR)
+	end
+	local function Input(input, gameProcessedEvent)
+		if not IsShiftKeyDown() then
 
-	--Open/Close with Shift
-	local Players = game:GetService("Players")
-	local Player = Players.LocalPlayer
-	wait()
-	local UIS = game:GetService("UserInputService")
-	local UserInterface = game.CoreGui.XanaxLib.Main
-	local Open = UserInterface.Visible
-	UIS.InputBegan:Connect(function(key)
-		if key.KeyCode == Enum.KeyCode.RightShift then 
-			if Open == false then
-				print(Open)			 
-				Open = true		 
-			elseif Open == true then 
-				Open = false 
+		else
+			if game.CoreGui.XanaxLib.Main.Visible == true then
+				game.CoreGui.XanaxLib.Main.Visible = false
+			elseif game.CoreGui.XanaxLib.Main.Visible == false then
+				game.CoreGui.XanaxLib.Main.Visible = true
 			end
 		end
-	end) 
-
+	end
+	UserInputService.InputBegan:Connect(Input)
 
 	local Sections = {}
 	function Sections:CreateSection(SectionName)
