@@ -194,14 +194,14 @@ function XanaxUILib:CreateWindow(WindowText)
 	plricon.Name = "plricon"
     plricon.Parent = Top
     plricon.BackgroundColor3 = Color3.new(0.192157, 0.2, 0.219608)
-    plricon.Position = UDim2.new(0.0804695264, 0, 0.0146627575, 0)
+    plricon.Position = UDim2.new(0.13, 0, 0, 0)
     plricon.Size = UDim2.new(0, 37, 0, 37)
 
     plrname.Name = "plrname"
     plrname.Parent = Top
     plrname.BackgroundColor3 = Color3.new(1, 1, 1)
     plrname.BackgroundTransparency = 1
-    plrname.Position = UDim2.new(0.37552464, 0, 0.020527862, 0)
+    plrname.Position = UDim2.new(0.13, 0, 0, 0)
     plrname.Size = UDim2.new(0, 79, 0, 16)
     plrname.Font = Enum.Font.SourceSansSemibold
     plrname.Text = "plrname"
@@ -213,7 +213,7 @@ function XanaxUILib:CreateWindow(WindowText)
     plrvhid.Parent = Top
     plrvhid.BackgroundColor3 = Color3.new(1, 1, 1)
     plrvhid.BackgroundTransparency = 1
-    plrvhid.Position = UDim2.new(0.37552464, 0, 0.0703812391, 0)
+    plrvhid.Position = UDim2.new(0.13, 0, 0, 0)
     plrvhid.Size = UDim2.new(0, 79, 0, 16)
     plrvhid.Font = Enum.Font.SourceSansSemibold
     plrvhid.Text = "uAFUO7pQ7xdQrmAA"
