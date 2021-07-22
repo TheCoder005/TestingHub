@@ -266,7 +266,13 @@ function XanaxUILib:CreateWindow(WindowText)
 			-- Normal input
 		else
 			-- Shift input
-			print('shift was pressed')
+			local MainGuiPart = game.CoreGui.XanaxLib.Main.Visible
+			debounce = false
+			if debounce == false then
+				MainGuiPart = false
+			else debounce == true then
+				MainGuiPart = true
+			end
 		end
 	end
 	
