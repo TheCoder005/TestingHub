@@ -100,7 +100,6 @@ function XanaxUILib:CreateWindow(WindowText)
 	local Top = Instance.new("ImageButton")
 	local Line2 = Instance.new("Frame")
 	local UiTitle = Instance.new("TextLabel")
-	local TabTxt = Instance.new("TextLabel")
 	local TabNameStatus = Instance.new("TextLabel")
 
 	--trying to add something cool
@@ -221,20 +220,6 @@ function XanaxUILib:CreateWindow(WindowText)
     plrvhid.TextSize = 10
     plrvhid.TextXAlignment = Enum.TextXAlignment.Left
 	--end of cool
-
-	print('wtf')
-
-	TabTxt.Name = "TabTxt"
-	TabTxt.Parent = Top
-	TabTxt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TabTxt.BackgroundTransparency = 1.000
-	TabTxt.Position = UDim2.new(0, 0, 0.866666675, 0)
-	TabTxt.Size = UDim2.new(0, 117, 0, 17)
-	TabTxt.Font = Enum.Font.GothamSemibold
-	TabTxt.Text = "-Tabs-"
-	TabTxt.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TabTxt.TextSize = 14.000
-	TabTxt.TextTransparency = 1.000
 
 	TabNameStatus.Name = "TabNameStatus"
 	TabNameStatus.Parent = Top
