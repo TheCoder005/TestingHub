@@ -263,10 +263,14 @@ function XanaxUILib:CreateWindow(WindowText)
 	UIS.InputBegan:Connect(function(key)
 		print('line3') -- Pressing a key will connect this function and cause it to run
 		if key.KeyCode == Enum.KeyCode.RightShift then -- If the key pressed was (whatever letter you choose) then it'll run the code below it
-			if Open == false then -- Once the correct key was pressed (change the letter to whatever you would like) then if the UserInterface is not visible it'll run the code below it
-				Open = true -- If the UserInterface was not visible then it made it visible upon pressing the key
+			if Open == false then
+				print('open adove')			 -- Once the correct key was pressed (change the letter to whatever you would like) then if the UserInterface is not visible it'll run the code below it
+				Open = true
+				print('open deblow')		 -- If the UserInterface was not visible then it made it visible upon pressing the key
 			elseif Open == true then -- Else if the UserInterface is visible the it will run the code below it
-				Open = false -- If the UserInterface was visible then it made it visible upon pressing the key
+				print('open adove2')	
+				Open = false
+				print('open deblow2') -- If the UserInterface was visible then it made it visible upon pressing the key
 			end
 		end
 	end) 
