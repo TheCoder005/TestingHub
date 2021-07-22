@@ -1,13 +1,13 @@
 --[[
 EXAMPLE:
-local XanaxUILib = loadstring(game:HttpGet("https://pastebin.com/raw/XZz3Ytbu"))()
-local Ui = XanaxUILib:CreateWindow("Example UI")
+local AnjeloScriptsHub = loadstring(game:HttpGet("https://pastebin.com/raw/XZz3Ytbu"))()
+local Ui = AnjeloScriptsHub:CreateWindow("Example UI")
 local Info = Ui:CreateSection("Info")
 local ExampleSection = Ui:CreateSection("Example")
 
 Info:CreateLabel("Made by yeetus#3635")
 Info:CreateLabel("This is a UI Library example")
-Info:CreateButton("Destroy UI", function() XanaxUILib.functions:DestroyGUI() end)
+Info:CreateButton("Destroy UI", function() AnjeloScriptsHub.functions:DestroyGUI() end)
 
 ExampleSection:CreateLabel("This is label")
 ExampleSection:CreateButton("This is button", function() print("This is function") end)
@@ -17,29 +17,29 @@ ExampleSection:CreateSlider("This is walkspeed slider", "WalkSpeed", 16, 100, fa
 end)
 ]]--
 
-local XanaxUILib = {}
+local AnjeloScriptsHub = {}
 
-XanaxUILib.flags = {}
-XanaxUILib.flags.toggles = {}
-XanaxUILib.flags.sliders = {}
-XanaxUILib.functions = {}
-XanaxUILib.currentTab = nil
+AnjeloScriptsHub.flags = {}
+AnjeloScriptsHub.flags.toggles = {}
+AnjeloScriptsHub.flags.sliders = {}
+AnjeloScriptsHub.functions = {}
+AnjeloScriptsHub.currentTab = nil
 
 local inputService = game:GetService("UserInputService")
 local ts = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 
-function XanaxUILib.functions:DestroyGUI()
+function AnjeloScriptsHub.functions:DestroyGUI()
 	if game.CoreGui:FindFirstChild("AnjeloScriptsHub") then game.CoreGui.XanaxLib:Destroy() end
 end
-XanaxUILib.functions:DestroyGUI() 
-function XanaxUILib.functions:Tween(Object, TweenData, Data)
+AnjeloScriptsHub.functions:DestroyGUI() 
+function AnjeloScriptsHub.functions:Tween(Object, TweenData, Data)
 	if TweenData == "Default" then TweenData = {Time = 0.1, Style = "Linear", Direction = "InOut"} end
 	ts:Create(Object, TweenInfo.new(TweenData.Time, Enum.EasingStyle[TweenData.Style], Enum.EasingDirection[TweenData.Direction]), Data):Play()
 end
 
 -- Drag function by Poly --
-function XanaxUILib.functions:Drag(frame,hold)
+function AnjeloScriptsHub.functions:Drag(frame,hold)
     if not hold then hold = frame end
     local dragging
     local dragInput
@@ -78,19 +78,19 @@ function XanaxUILib.functions:Drag(frame,hold)
     end)
 end
 
-function XanaxUILib.functions:ChangeSection(NewSection)
-	if XanaxUILib.currentTab == NewSection then return end
-	if XanaxUILib.currentTab == nil then
-		XanaxUILib.currentTab = NewSection
-		XanaxUILib.currentTab.Visible = true
+function AnjeloScriptsHub.functions:ChangeSection(NewSection)
+	if AnjeloScriptsHub.currentTab == NewSection then return end
+	if AnjeloScriptsHub.currentTab == nil then
+		AnjeloScriptsHub.currentTab = NewSection
+		AnjeloScriptsHub.currentTab.Visible = true
 		return		
 	end
-	XanaxUILib.currentTab.Visible = false
-	XanaxUILib.currentTab = NewSection
+	AnjeloScriptsHub.currentTab.Visible = false
+	AnjeloScriptsHub.currentTab = NewSection
 	NewSection.Visible = true
 end
 
-function XanaxUILib:CreateWindow(WindowText)
+function AnjeloScriptsHub:CreateWindow(WindowText)
 	local XanaxLib = Instance.new("ScreenGui")
 	local Main = Instance.new("ImageButton")
 	local TabBtns = Instance.new("ImageButton")
@@ -195,7 +195,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	TabNameStatus.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TabNameStatus.TextSize = 14.000
 	TabNameStatus.TextXAlignment = Enum.TextXAlignment.Right
-	XanaxUILib.functions:Drag(Main, UiTitle)
+	AnjeloScriptsHub.functions:Drag(Main, UiTitle)
 	local Sections = {}
 	function Sections:CreateSection(SectionName)
 		local TabMain = Instance.new("Frame")
@@ -258,12 +258,12 @@ function XanaxUILib:CreateWindow(WindowText)
 		TopLien.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
 		TopLien.BorderSizePixel = 0
 		TopLien.Size = UDim2.new(1, 0, 0, 1)
-		if XanaxUILib.currentTab == nil then
-			XanaxUILib.functions:ChangeSection(TabMain)
+		if AnjeloScriptsHub.currentTab == nil then
+			AnjeloScriptsHub.functions:ChangeSection(TabMain)
 			TabNameStatus.Text = SectionName .. "  "
 		end
 		TabBtn.MouseButton1Click:Connect(function()
-			XanaxUILib.functions:ChangeSection(TabMain)
+			AnjeloScriptsHub.functions:ChangeSection(TabMain)
 			TabNameStatus.Text = SectionName .. "  "
 		end)
 		
@@ -302,7 +302,7 @@ function XanaxUILib:CreateWindow(WindowText)
 			Button.MouseButton1Click:Connect(onclick)
 		end
 		function ObjectTbl:CreateToggle(toggleTxt, flag, func)
-			XanaxUILib.flags.toggles[flag] = false
+			AnjeloScriptsHub.flags.toggles[flag] = false
 			local isFunctionToggle = false
 			if func then
 				isFunctionToggle = true
@@ -352,9 +352,9 @@ function XanaxUILib:CreateWindow(WindowText)
 			ToggleStatus.SliceCenter = Rect.new(32, 32, 224, 224)
 						
 			local function togglefunc()
-				XanaxUILib.flags.toggles[flag] = not XanaxUILib.flags.toggles[flag]
-				if isFunctionToggle then func(XanaxUILib.flags.toggles[flag]) end
-				XanaxUILib.functions:Tween(ToggleStatus, {Time = 0.1, Style = "Linear", Direction = "InOut"}, {ImageColor3 = XanaxUILib.flags.toggles[flag] and Color3.fromRGB(0, 255, 50) or Color3.fromRGB(255, 20, 24)})
+				AnjeloScriptsHub.flags.toggles[flag] = not AnjeloScriptsHub.flags.toggles[flag]
+				if isFunctionToggle then func(AnjeloScriptsHub.flags.toggles[flag]) end
+				AnjeloScriptsHub.functions:Tween(ToggleStatus, {Time = 0.1, Style = "Linear", Direction = "InOut"}, {ImageColor3 = AnjeloScriptsHub.flags.toggles[flag] and Color3.fromRGB(0, 255, 50) or Color3.fromRGB(255, 20, 24)})
 			end
 			
 			Toggle.MouseButton1Click:Connect(togglefunc)
@@ -395,7 +395,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	        if func then     
 	           isFunc = true 
 	        end
-	        XanaxUILib.flags.sliders[flag] = min
+	        AnjeloScriptsHub.flags.sliders[flag] = min
 	        
 	        local Slider = Instance.new("TextButton")
             local SLIDERBotomLien = Instance.new("Frame")
@@ -479,9 +479,9 @@ function XanaxUILib:CreateWindow(WindowText)
                         Value = math.floor(Value);
                     end;
                     Value = tonumber(string.format("%.2f", Value));
-                    XanaxUILib.functions:Tween(sliderfiller, "Default", {Size = UDim2.new(percent, 0, 1, 0)})
+                    AnjeloScriptsHub.functions:Tween(sliderfiller, "Default", {Size = UDim2.new(percent, 0, 1, 0)})
                     sliderval.Text = tostring(Value) .. " / " .. max;
-                    XanaxUILib.flags.sliders[flag] = Value;
+                    AnjeloScriptsHub.flags.sliders[flag] = Value;
                     if isFunc then func(Value) end
                 end);
             end);
@@ -496,4 +496,4 @@ function XanaxUILib:CreateWindow(WindowText)
 	end)
 	return Sections
 end
-return XanaxUILib
+return AnjeloScriptsHub
