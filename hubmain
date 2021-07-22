@@ -157,7 +157,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	Top.Parent = Main
 	Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Top.BackgroundTransparency = 1.000
-	Top.Size = UDim2.new(0, 421, 0, 30)
+	Top.Size = UDim2.new(0, 619, 0, 30)
 	Top.Image = "rbxassetid://2790382281"
 	Top.ImageColor3 = Color3.fromRGB(43, 43, 43)
 	Top.ScaleType = Enum.ScaleType.Slice
