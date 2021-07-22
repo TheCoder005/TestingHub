@@ -129,7 +129,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	TabBtns.BackgroundTransparency = 1.000
 	TabBtns.Size = UDim2.new(0, 149, 0, 341)
 	TabBtns.Image = "rbxassetid://2790382281"
-	TabBtns.ImageColor3 = Color3.fromRGB(43, 43, 43)
+	TabBtns.ImageColor3 = Color3.fromRGB(39, 40, 44)
 	TabBtns.ScaleType = Enum.ScaleType.Slice
 	TabBtns.SliceCenter = Rect.new(4, 4, 252, 252)
 	
@@ -165,7 +165,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	Top.BackgroundTransparency = 1.000
 	Top.Size = UDim2.new(0, 619, 0, 37)
 	Top.Image = "rbxassetid://2790382281"
-	Top.ImageColor3 = Color3.fromRGB(43, 43, 43)
+	Top.ImageColor3 = Color3.fromRGB(39, 40, 44)
 	Top.ScaleType = Enum.ScaleType.Slice
 	Top.SliceCenter = Rect.new(4, 4, 252, 252)
 	
