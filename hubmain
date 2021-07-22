@@ -157,7 +157,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	Top.Parent = Main
 	Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Top.BackgroundTransparency = 1.000
-	Top.Size = UDim2.new(0, 619, 0, 30)
+	Top.Size = UDim2.new(0, 619, 0, 37)
 	Top.Image = "rbxassetid://2790382281"
 	Top.ImageColor3 = Color3.fromRGB(43, 43, 43)
 	Top.ScaleType = Enum.ScaleType.Slice
@@ -167,8 +167,8 @@ function XanaxUILib:CreateWindow(WindowText)
 	Line2.Parent = Top
 	Line2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Line2.BorderSizePixel = 0
-	Line2.Position = UDim2.new(0.277909726, 0, 0.866666675, 0)
-	Line2.Size = UDim2.new(0, 304, 0, 4)
+	Line2.Position = UDim2.new(0.188909726, 0, 0.866666675, 0)
+	Line2.Size = UDim2.new(0, 501, 0, 4)
 	
 	UiTitle.Name = "UiTitle"
 	UiTitle.Parent = Top
