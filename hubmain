@@ -44,7 +44,7 @@ function XanaxUILib.functions:Drag(frame,hold)
     local dragging
     local dragInput
     local dragStart
-    local startPos
+    local startPos 
 
     local function update(input)
         local delta = input.Position - dragStart
