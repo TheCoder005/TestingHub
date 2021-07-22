@@ -94,12 +94,19 @@ function XanaxUILib:CreateWindow(WindowText)
 	local XanaxLib = Instance.new("ScreenGui")
 	local Main = Instance.new("ImageButton")
 	local TabBtns = Instance.new("ImageButton")
+	local Line1 = Instance.new("Frame")
 	local TabBtnHolder = Instance.new("ScrollingFrame")
 	local TabBtnLayout = Instance.new("UIListLayout")
 	local Top = Instance.new("ImageButton")
+	local Line2 = Instance.new("Frame")
 	local UiTitle = Instance.new("TextLabel")
 	local TabTxt = Instance.new("TextLabel")
 	local TabNameStatus = Instance.new("TextLabel")
+
+	--trying to add something cool
+	local plricon = Instance.new("ImageLabel")
+    local plrname = Instance.new("TextLabel")
+    local plrvhid = Instance.new("TextLabel")
 
 
 	XanaxLib.Name = "XanaxLib"
@@ -126,6 +133,14 @@ function XanaxUILib:CreateWindow(WindowText)
 	TabBtns.ImageColor3 = Color3.fromRGB(43, 43, 43)
 	TabBtns.ScaleType = Enum.ScaleType.Slice
 	TabBtns.SliceCenter = Rect.new(4, 4, 252, 252)
+	
+	Line1.Name = "Line1"
+	Line1.Parent = TabBtns
+	Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Line1.BorderSizePixel = 0
+	Line1.Position = UDim2.new(0.975000024, 0, 0.019999997, 0)
+	Line1.Size = UDim2.new(0, 4, 0, 334)
+	Line1.BackgroundTransparency = 1.000
 	
 	TabBtnHolder.Name = "TabBtnHolder"
 	TabBtnHolder.Parent = TabBtns
@@ -155,6 +170,14 @@ function XanaxUILib:CreateWindow(WindowText)
 	Top.ScaleType = Enum.ScaleType.Slice
 	Top.SliceCenter = Rect.new(4, 4, 252, 252)
 	
+	Line2.Name = "Line2"
+	Line2.Parent = Top
+	Line2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Line2.BorderSizePixel = 0
+	Line2.Position = UDim2.new(0.234, 0, 0.866666675, 0)
+	Line2.Size = UDim2.new(0, 473, 0, 4)
+	Line2.BackgroundTransparency = 1.000
+
 	UiTitle.Name = "UiTitle"
 	UiTitle.Parent = Top
 	UiTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
