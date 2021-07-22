@@ -252,14 +252,16 @@ function XanaxUILib:CreateWindow(WindowText)
 	imageLabel.Size = UDim2.new(0, 37,0, 37)
 
 	--Open/Close with Shift
+	print('line1')
 	local Players = game:GetService("Players")
 	local Player = Players.LocalPlayer
 	wait()
 	local UIS = game:GetService("UserInputService")
-	local UserInterface = game.CoreGui.XanaxLib.Main -- Set this Variables Pathway to whatever matches your game
+	local UserInterface = game.CoreGui.XanaxLib.Main
 	local Open = UserInterface.Visible
-
-	UIS.InputBegan:Connect(function(key) -- Pressing a key will connect this function and cause it to run
+	print('line2')
+	UIS.InputBegan:Connect(function(key)
+		print('line3') -- Pressing a key will connect this function and cause it to run
 		if key.KeyCode == Enum.KeyCode.RightShift then -- If the key pressed was (whatever letter you choose) then it'll run the code below it
 			if Open == false then -- Once the correct key was pressed (change the letter to whatever you would like) then if the UserInterface is not visible it'll run the code below it
 				Open = true -- If the UserInterface was not visible then it made it visible upon pressing the key
