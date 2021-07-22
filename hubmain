@@ -191,6 +191,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	UiTitle.Position = UDim2.new(0.13, 0, 0, 0)
 
 	--cool
+	print('why not working?')
 	plricon.Name = "plricon"
     plricon.Parent = Top
     plricon.BackgroundColor3 = Color3.new(0.192157, 0.2, 0.219608)
