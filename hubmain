@@ -30,7 +30,7 @@ local ts = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 
 function AnjeloScriptsHub.functions:DestroyGUI()
-	if game.CoreGui:FindFirstChild("AnjeloScriptsHub") then game.CoreGui.XanaxLib:Destroy() end
+	if game.CoreGui:FindFirstChild("AnjeloScriptsHub") then game.CoreGui.AnjeloScriptsHubLib:Destroy() end
 end
 AnjeloScriptsHub.functions:DestroyGUI() 
 function AnjeloScriptsHub.functions:Tween(Object, TweenData, Data)
@@ -91,7 +91,7 @@ function AnjeloScriptsHub.functions:ChangeSection(NewSection)
 end
 
 function AnjeloScriptsHub:CreateWindow(WindowText)
-	local XanaxLib = Instance.new("ScreenGui")
+	local AnjeloScriptsHubLib = Instance.new("ScreenGui")
 	local Main = Instance.new("ImageButton")
 	local TabBtns = Instance.new("ImageButton")
 	local Line1 = Instance.new("Frame")
@@ -103,8 +103,8 @@ function AnjeloScriptsHub:CreateWindow(WindowText)
 	local TabTxt = Instance.new("TextLabel")
 	local TabNameStatus = Instance.new("TextLabel")
 	
-	XanaxLib.Name = "AnjeloScriptsHub"
-	XanaxLib.Parent = game:GetService("CoreGui")
+	AnjeloScriptsHubLib.Name = "AnjeloScriptsHub"
+	AnjeloScriptsHubLib.Parent = game:GetService("CoreGui")
 
 	Main.Name = "Main"
 	Main.Parent = AnjeloScriptsHub
