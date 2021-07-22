@@ -106,7 +106,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	local plricon = Instance.new("ImageLabel")
     local plrname = Instance.new("TextLabel")
     local plrvhid = Instance.new("TextLabel")
-
+	local UserInputService = game:GetService("UserInputService")
 
 	XanaxLib.Name = "XanaxLib"
 	XanaxLib.Parent = game:GetService("CoreGui")
@@ -250,6 +250,28 @@ function XanaxUILib:CreateWindow(WindowText)
 	local imageLabel = game.CoreGui.XanaxLib.Main.Top.plricon
 	imageLabel.Image = content
 	imageLabel.Size = UDim2.new(0, 37,0, 37)
+
+	--hide and open menu
+	-- Shift keys
+	local shiftKeyL = Enum.KeyCode.LeftShift
+	local shiftKeyR = Enum.KeyCode.RightShift
+
+	local function IsShiftKeyDown()
+		return UserInputService:IsKeyDown(shiftKeyR)
+	end
+
+	-- Handle user input began differently depending on whether a shift key is pressed
+	local function Input(input, gameProcessedEvent)
+		if not IsShiftKeyDown() then
+			-- Normal input
+		else
+			-- Shift input
+			print('shift was pressed')
+		end
+	end
+	
+	UserInputService.InputBegan:Connect(Input)
+
 
 	local Sections = {}
 	function Sections:CreateSection(SectionName)
