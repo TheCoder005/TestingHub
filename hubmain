@@ -273,12 +273,12 @@ function XanaxUILib:CreateWindow(WindowText)
 		
 		TabBtn.Name = "TabBtn"
 		TabBtn.Parent = TabBtnHolder
-		TabBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+		TabBtn.BackgroundColor3 = Color3.fromRGB(39, 40, 44)
 		TabBtn.BorderSizePixel = 0
 		TabBtn.Position = UDim2.new(0.055555556, 0, 0, 0)
-		TabBtn.Size = UDim2.new(0, 104, 0, 27)
+		TabBtn.Size = UDim2.new(0, 123, 0, 28)
 		TabBtn.AutoButtonColor = false
-		TabBtn.Font = Enum.Font.SourceSans
+		TabBtn.Font = Enum.Font.SourceSansSemibold
 		TabBtn.Text = SectionName
 		TabBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TabBtn.TextSize = 16.000
