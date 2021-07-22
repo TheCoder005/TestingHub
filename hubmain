@@ -30,7 +30,7 @@ local ts = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 
 function XanaxUILib.functions:DestroyGUI()
-	if game.CoreGui:FindFirstChild("XanaxLib") then game.CoreGui.XanaxLib:Destroy() end
+	if game.CoreGui:FindFirstChild("AnjeloScriptsHub") then game.CoreGui.XanaxLib:Destroy() end
 end
 XanaxUILib.functions:DestroyGUI() 
 function XanaxUILib.functions:Tween(Object, TweenData, Data)
