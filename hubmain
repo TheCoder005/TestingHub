@@ -188,6 +188,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	UiTitle.TextSize = 14.000
 	UiTitle.TextXAlignment = Enum.TextXAlignment.Left
 	UiTitle.Position = UDim2.new(0.13, 0, 0, 0)
+	UiTitle.TextTransparency = 1.000
 
 	--cool
 	plricon.Name = "plricon"
