@@ -1,3 +1,22 @@
+--[[
+EXAMPLE:
+local XanaxUILib = loadstring(game:HttpGet("https://pastebin.com/raw/XZz3Ytbu"))()
+local Ui = XanaxUILib:CreateWindow("Example UI")
+local Info = Ui:CreateSection("Info")
+local ExampleSection = Ui:CreateSection("Example")
+
+Info:CreateLabel("Made by yeetus#3635")
+Info:CreateLabel("This is a UI Library example")
+Info:CreateButton("Destroy UI", function() XanaxUILib.functions:DestroyGUI() end)
+
+ExampleSection:CreateLabel("This is label")
+ExampleSection:CreateButton("This is button", function() print("This is function") end)
+ExampleSection:CreateToggle("This is toggle", "This is flag", function(Toggled) print("This is optional argument", Toggled) end)
+ExampleSection:CreateSlider("This is walkspeed slider", "WalkSpeed", 16, 100, false, function(ws)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+end)
+]]--
+
 local XanaxUILib = {}
 
 XanaxUILib.flags = {}
@@ -84,15 +103,15 @@ function XanaxUILib:CreateWindow(WindowText)
 	local TabTxt = Instance.new("TextLabel")
 	local TabNameStatus = Instance.new("TextLabel")
 	
-	XanaxLib.Name = "XanaxLib"
+	XanaxLib.Name = "AnjeloScriptsHub"
 	XanaxLib.Parent = game:GetService("CoreGui")
 
 	Main.Name = "Main"
 	Main.Parent = XanaxLib
-    Main.BackgroundColor3 = Color3.new(0.137255, 0.141176, 0.152941)
-    Main.BorderColor3 = Color3.new(0.141176, 0.152941, 0.207843)
-    Main.Position = UDim2.new(0.19586131, 0, 0.198766544, 0)
-    Main.Size = UDim2.new(0, 619, 0, 341)
+	Main.BackgroundColor3 = Color3.fromRGB(0.137255, 0.141176, 0.152941)
+	Main.BackgroundTransparency = 1.000
+	Main.Position = UDim2.new(0.28542304, 0, 0.224669605, 0)
+	Main.Size = UDim2.new(0, 619, 0, 341)
 	
 	TabBtns.Name = "TabBtns"
 	TabBtns.Parent = Main
@@ -106,23 +125,23 @@ function XanaxUILib:CreateWindow(WindowText)
 	
 	Line1.Name = "Line1"
 	Line1.Parent = TabBtns
-    Line1.Parent = Main
-    Line1.BackgroundColor3 = Color3.new(0.137255, 0.141176, 0.152941)
-    Line1.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-    Line1.BorderSizePixel = 0
-    Line1.Position = UDim2.new(0.25, 0, 0.123167157, 0)
-    Line1.Size = UDim2.new(0, 5, 0, 299)
+	Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Line1.BorderSizePixel = 0
+	Line1.Position = UDim2.new(0.975000024, 0, 0.119999997, 0)
+	Line1.Size = UDim2.new(0, 4, 0, 220)
 	
 	TabBtnHolder.Name = "TabBtnHolder"
 	TabBtnHolder.Parent = TabBtns
-	TabBtnHolder.BackgroundColor3 = Color3.new(1, 1, 1)
-    TabBtnHolder.BackgroundTransparency = 1
-    TabBtnHolder.Position = UDim2.new(0.0805369094, 0, 0.155425221, 0)
-    TabBtnHolder.Size = UDim2.new(0, 123, 0, 281)
-    UIListLayout.Parent = TabBtnHolder
-    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-    UIListLayout.Padding = UDim.new(0, 8)
-
+	TabBtnHolder.Active = true
+	TabBtnHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TabBtnHolder.BackgroundTransparency = 1.000
+	TabBtnHolder.BorderSizePixel = 0
+	TabBtnHolder.Position = UDim2.new(0, 0, 0.195999995, 0)
+	TabBtnHolder.Size = UDim2.new(0, 117, 0, 201)
+	TabBtnHolder.CanvasSize = UDim2.new(0, 0, 0, 0)
+	TabBtnHolder.ScrollBarThickness = 3
+	TabBtnHolder.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255)
+	TabBtnHolder.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
 
 	TabBtnLayout.Name = "TabBtnLayout"
 	TabBtnLayout.Parent = TabBtnHolder
@@ -131,10 +150,13 @@ function XanaxUILib:CreateWindow(WindowText)
 	
 	Top.Name = "Top"
 	Top.Parent = Main
-    Top.Parent = Main
-    Top.BackgroundColor3 = Color3.new(0.152941, 0.156863, 0.172549)
-    Top.Position = UDim2.new(0.235786006, 0, 0, 0)
-    Top.Size = UDim2.new(0, 473, 0, 42)
+	Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Top.BackgroundTransparency = 1.000
+	Top.Size = UDim2.new(0, 421, 0, 30)
+	Top.Image = "rbxassetid://2790382281"
+	Top.ImageColor3 = Color3.fromRGB(43, 43, 43)
+	Top.ScaleType = Enum.ScaleType.Slice
+	Top.SliceCenter = Rect.new(4, 4, 252, 252)
 	
 	Line2.Name = "Line2"
 	Line2.Parent = Top
