@@ -119,10 +119,10 @@ function XanaxUILib:CreateWindow(WindowText)
 	Main.BackgroundTransparency = 1.000
 	Main.Position = UDim2.new(0.28542304, 0, 0.224669605, 0)
 	Main.Size = UDim2.new(0, 619, 0, 341)
-	Main.Image = "rbxassetid://2790382281"
-	Main.ImageColor3 = Color3.fromRGB(52, 52, 52)
-	Main.ScaleType = Enum.ScaleType.Slice
-	Main.SliceCenter = Rect.new(4, 4, 252, 252)
+	--Main.Image = "rbxassetid://2790382281"
+	--Main.ImageColor3 = Color3.fromRGB(52, 52, 52)
+	--Main.ScaleType = Enum.ScaleType.Slice
+	--Main.SliceCenter = Rect.new(4, 4, 252, 252)
 	
 	TabBtns.Name = "TabBtns"
 	TabBtns.Parent = Main
@@ -148,7 +148,7 @@ function XanaxUILib:CreateWindow(WindowText)
 	TabBtnHolder.BackgroundTransparency = 1.000
 	TabBtnHolder.BorderSizePixel = 0
 	TabBtnHolder.Position = UDim2.new(0, 0, 0.195999995, 0)
-	TabBtnHolder.Size = UDim2.new(0, 117, 0, 201)
+	TabBtnHolder.Size = UDim2.new(0, 140, 0, 201)
 	TabBtnHolder.CanvasSize = UDim2.new(0, 0, 0, 0)
 	TabBtnHolder.ScrollBarThickness = 3
 	TabBtnHolder.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255)
