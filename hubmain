@@ -108,9 +108,10 @@ function XanaxUILib:CreateWindow(WindowText)
 
 	Main.Name = "Main"
 	Main.Parent = AnjeloScriptsHub
-	Main.BackgroundColor3 = Color3.fromRGB(0.137255, 0.141176, 0.152941)
-	Main.Position = UDim2.new(0.28542304, 0, 0.224669605, 0)
-	Main.Size = UDim2.new(0, 619, 0, 341)
+    Main.BackgroundColor3 = Color3.new(0.137255, 0.141176, 0.152941)
+    Main.BorderColor3 = Color3.new(0.141176, 0.152941, 0.207843)
+    Main.Position = UDim2.new(0.19586131, 0, 0.198766544, 0)
+    Main.Size = UDim2.new(0, 619, 0, 341)
 	
 	TabBtns.Name = "TabBtns"
 	TabBtns.Parent = Main
