@@ -115,13 +115,8 @@ function XanaxUILib:CreateWindow(WindowText)
 	
 	TabBtns.Name = "TabBtns"
 	TabBtns.Parent = Main
-	TabBtns.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TabBtns.BackgroundTransparency = 1.000
-	TabBtns.Size = UDim2.new(0, 120, 0, 250)
-	TabBtns.Image = "rbxassetid://2790382281"
-	TabBtns.ImageColor3 = Color3.fromRGB(43, 43, 43)
-	TabBtns.ScaleType = Enum.ScaleType.Slice
-	TabBtns.SliceCenter = Rect.new(4, 4, 252, 252)
+    Side.BackgroundColor3 = Color3.new(0.152941, 0.156863, 0.172549)
+    Side.Size = UDim2.new(0, 149, 0, 341)
 	
 	Line1.Name = "Line1"
 	Line1.Parent = TabBtns
