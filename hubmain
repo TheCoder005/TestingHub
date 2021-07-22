@@ -109,7 +109,6 @@ function XanaxUILib:CreateWindow(WindowText)
 	Main.Name = "Main"
 	Main.Parent = XanaxLib
 	Main.BackgroundColor3 = Color3.fromRGB(0.137255, 0.141176, 0.152941)
-	Main.BackgroundTransparency = 1.000
 	Main.Position = UDim2.new(0.28542304, 0, 0.224669605, 0)
 	Main.Size = UDim2.new(0, 619, 0, 341)
 	
