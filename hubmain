@@ -138,8 +138,8 @@ function XanaxUILib:CreateWindow(WindowText)
 	Line1.Parent = TabBtns
 	Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Line1.BorderSizePixel = 0
-	Line1.Position = UDim2.new(0.975000024, 0, 0.119999997, 0)
-	Line1.Size = UDim2.new(0, 4, 0, 220)
+	Line1.Position = UDim2.new(0.975000024, 0, 0.019999997, 0)
+	Line1.Size = UDim2.new(0, 4, 0, 334)
 	
 	TabBtnHolder.Name = "TabBtnHolder"
 	TabBtnHolder.Parent = TabBtns
@@ -173,8 +173,8 @@ function XanaxUILib:CreateWindow(WindowText)
 	Line2.Parent = Top
 	Line2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Line2.BorderSizePixel = 0
-	Line2.Position = UDim2.new(0.240909726, 0, 0.866666675, 0)
-	Line2.Size = UDim2.new(0, 469, 0, 4)
+	Line2.Position = UDim2.new(0.234, 0, 0.866666675, 0)
+	Line2.Size = UDim2.new(0, 473, 0, 4)
 	
 	UiTitle.Name = "UiTitle"
 	UiTitle.Parent = Top
