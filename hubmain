@@ -102,7 +102,13 @@ function XanaxUILib:CreateWindow(WindowText)
 	local UiTitle = Instance.new("TextLabel")
 	local TabTxt = Instance.new("TextLabel")
 	local TabNameStatus = Instance.new("TextLabel")
-	
+
+	--trying to add something cool
+	local plricon = Instance.new("ImageLabel")
+    local plrname = Instance.new("TextLabel")
+    local plrvhid = Instance.new("TextLabel")
+
+
 	XanaxLib.Name = "XanaxLib"
 	XanaxLib.Parent = game:GetService("CoreGui")
 
@@ -180,7 +186,8 @@ function XanaxUILib:CreateWindow(WindowText)
 	UiTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 	UiTitle.TextSize = 14.000
 	UiTitle.TextXAlignment = Enum.TextXAlignment.Left
-	
+	UiTitle.Position = UDim2.new(0.13, 0, 0, 0)
+
 	TabTxt.Name = "TabTxt"
 	TabTxt.Parent = Top
 	TabTxt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
